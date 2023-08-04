@@ -99,7 +99,6 @@ forEach(button=>{
         let productId=button.dataset.productId;
         removeFromCart(productId);    
          document.querySelector(`.remove-from-cart-js-${productId}`).remove();
-      
-
+    
     })
 })
