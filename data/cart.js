@@ -36,12 +36,10 @@ export function addToCart(productID){
   }
 
  
-  export function removeFromCart(prooductId){
+  export function removeFromCart(productId){
     let deleteItem=cart.findIndex(cartItem=>{
         return cartItem.productID===productId;
     });
-
     cart.splice(deleteItem,1);
-    const newCart=cart;
-    console.log(newCart);
+ 
 }
