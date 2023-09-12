@@ -28,7 +28,7 @@ let cartHTML=``;
               ${matchingItem.name}
             </div>
             <div class="product-price">
-              $${cartItem.quantity*(matchingItem.priceCents/100)}
+              $${cartItem.quantity*(matchingItem.priceCents/100).toFixed()}
             </div>
             <div class="product-quantity">
               <span>
@@ -93,12 +93,14 @@ let cartHTML=``;
     })
 
 document.querySelector('.order-summary-js').innerHTML=cartHTML;
+document.querySelector('.return-to-home-link').innerHTML=cart.length
 document.querySelectorAll('.delete-js').
 forEach(button=>{
     button.addEventListener('click',()=>{
         let productId=button.dataset.productId;
         removeFromCart(productId);    
          document.querySelector(`.remove-from-cart-js-${productId}`).remove();
+         document.querySelector('.return-to-home-link').innerHTML=cart.length
     
     })
 })

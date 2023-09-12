@@ -9,6 +9,17 @@ export const cart= JSON.parse(localStorage.getItem('cart')) ||[
   }
 ]
 
+export function updateCart(){
+  let cartQuantity = 0;
+
+  cart.forEach(item => {
+    cartQuantity += item.quantity;
+  })
+
+return cartQuantity;
+}
+
+
 function addToLocalStorage(){
 
   localStorage.setItem('cart',JSON.stringify(cart));
