@@ -1,3 +1,3 @@
-#Dynamic Amazon Clone
+# Dynamic Amazon Clone
 
-Built Amazon clone with HTML,CSS and JavaScript
+Built Amazon clone with HTML,CSS and JavaScript😃
